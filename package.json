@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/andysumi/parseserver-gas-client#readme",
   "devDependencies": {
-    "eslint": "^5.2.0",
+    "@google/clasp": "^1.5.2",
+    "eslint": "^5.3.0",
     "eslint-plugin-googleappsscript": "^1.0.1"
   }
 }
