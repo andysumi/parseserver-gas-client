@@ -5,8 +5,7 @@
       this.apiUrl = 'https://' + domain + '/1';
       this.headers = {
         'X-Parse-Application-Id' : appId,
-        'X-Parse-Master-Key'     : key,
-        'Content-Type'           : 'application/json'
+        'X-Parse-Master-Key'     : key
       };
 
       if (!domain) throw new Error('"domain"は必須です');
