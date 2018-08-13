@@ -9,7 +9,9 @@
   "env": {
     "googleappsscript/googleappsscript": true
   },
-  "globals": {},
+  "globals": {
+    "ParseServerClient": false
+  },
   "rules": {
     "semi": "warn",
     "quotes": [
