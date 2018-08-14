@@ -38,7 +38,10 @@
         payload            : JSON.stringify(options.payload) || {}
       });
 
-      return JSON.parse(response.getContentText());
+      return {
+        status : response.getResponseCode(),
+        body   : response.getContentText()
+      };
     };
     return ParseServerClient;
   })();
