@@ -29,6 +29,22 @@
       return this.fetch_(this.apiUrl + '/users?' + params.join('&'), {method: 'get'});
     };
 
+    ParseServerClient.prototype.searchObjectsClass = function (object, query, options) {
+      var params = [];
+
+      if (query) {
+        params.push('where=' + encodeURIComponent(JSON.stringify(query)));
+      }
+
+      if (options) {
+        for (var key in options) {
+          params.push(key + '=' + options[key]);
+        }
+      }
+
+      return this.fetch_(this.apiUrl + '/classes/' + object + '/?' + params.join('&'), {method: 'get'});
+    };
+
     ParseServerClient.prototype.fetch_ = function (url, options) {
       var response = UrlFetchApp.fetch(url, {
         method             : options.method,
